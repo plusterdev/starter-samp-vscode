@@ -1,5 +1,7 @@
 /*
 	ปรับแปลงเป็น sampctl by leak
+    - เพิ่ม Easy Dialog
+	- และ SetSkillPlayer
 
 */
 
