@@ -1,7 +1,7 @@
 /*
-	��Ѻ�ŧ�� sampctl by leak
-    - ���� Easy Dialog
-	- ��� SetSkillPlayer
+	»ÃÑºá»Å§à»ç¹ sampctl by soup
+    - à¾ÔèÁ Easy Dialog
+	- áÅÐ SetSkillPlayer
 
 */
 
@@ -72,9 +72,9 @@ public OnPlayerSpawn(playerid)
 	new PlayerName[MAX_PLAYER_NAME],
     string[40]; 
     GetPlayerName(playerid, PlayerName, sizeof(PlayerName));
-    format(string, sizeof(string), "%s ���Դ�����", PlayerName);
+    format(string, sizeof(string), "%s ä´éà¡Ô´ÊÓàÃç¨", PlayerName);
     SendClientMessageToAll(0xFFFFFFFF, string);
-	//��� SetSkill
+	//¡ÒÃ SetSkill
 	SetPlayerSkillLevel(playerid, WEAPONSKILL_SAWNOFF_SHOTGUN, 1);
 	SetPlayerSkillLevel(playerid, WEAPONSKILL_PISTOL, 1);
 	return 1;
@@ -102,9 +102,9 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-	if (strcmp("/�׹", cmdtext, true, 10) == 0)
+	if (strcmp("/»×¹", cmdtext, true, 10) == 0)
 	{
-		Dialog_Show(playerid, WeaponMenu, DIALOG_STYLE_LIST, "���ٻ׹", "9mm\nSilenced 9mm\nDesert Eagle\nShotgun\nSawn-off Shotgun\nCombat Shotgun", "���͡", "�͡");
+		Dialog_Show(playerid, WeaponMenu, DIALOG_STYLE_LIST, "àÁ¹Ù»×¹", "9mm\nSilenced 9mm\nDesert Eagle\nShotgun\nSawn-off Shotgun\nCombat Shotgun", "àÅ×Í¡", "ÍÍ¡");
 		return 1;
 	}
 	return 0;
@@ -249,7 +249,7 @@ Dialog:WeaponMenu(playerid, response, listitem, inputtext[])
     if (response)
     {
         new str[64];
-        format(str, 64, "�֧�����͡ '%s'.", inputtext);
+        format(str, 64, "ÁÖ§ä´éàÅ×Í¡ '%s'.", inputtext);
 
         GivePlayerWeapon(playerid, listitem + 22, 500);
         SendClientMessage(playerid, -1, str);
