@@ -1,12 +1,15 @@
 /*
-	สคริปต์เริ่มต้น sampctl by NayMarch
+	ʤ�Ի��������� sampctl by NayMarch
     - Easy Dialog
 	- SetSkillPlayer
 
 */
 
 #include <a_samp>
-#include <Cefix>
+
+#define CE_AUTO
+#include <streamer>
+#include <CEFix>
 
 #include <easyDialog>
 
@@ -15,7 +18,7 @@
 public OnFilterScriptInit()
 {
 	print("\n--------------------------------------");
-	print(" Blank Filterscript by your name here");
+	print(" Naymarch on track");
 	print("--------------------------------------\n");
 	return 1;
 }
@@ -72,9 +75,9 @@ public OnPlayerSpawn(playerid)
 	new PlayerName[MAX_PLAYER_NAME],
     string[40]; 
     GetPlayerName(playerid, PlayerName, sizeof(PlayerName));
-    format(string, sizeof(string), "%s ä´éà¡Ô´ÊÓàÃç¨", PlayerName);
+    format(string, sizeof(string), "%s ���Դ�����", PlayerName);
     SendClientMessageToAll(0xFFFFFFFF, string);
-	//¡ÒÃ SetSkill
+	//¡Ò�� SetSkill
 	SetPlayerSkillLevel(playerid, WEAPONSKILL_SAWNOFF_SHOTGUN, 1);
 	SetPlayerSkillLevel(playerid, WEAPONSKILL_PISTOL, 1);
 	return 1;
@@ -102,9 +105,9 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-	if (strcmp("/»×¹", cmdtext, true, 10) == 0)
+	if (strcmp("/�׹", cmdtext, true, 10) == 0)
 	{
-		Dialog_Show(playerid, WeaponMenu, DIALOG_STYLE_LIST, "àÁ¹Ù»×¹", "9mm\nSilenced 9mm\nDesert Eagle\nShotgun\nSawn-off Shotgun\nCombat Shotgun", "àÅ×Í¡", "ÍÍ¡");
+		Dialog_Show(playerid, WeaponMenu, DIALOG_STYLE_LIST, "��¡�û׹", "9mm\nSilenced 9mm\nDesert Eagle\nShotgun\nSawn-off Shotgun\nCombat Shotgun", "àÅ×��¡", "����¡");
 		return 1;
 	}
 	return 0;
@@ -249,7 +252,7 @@ Dialog:WeaponMenu(playerid, response, listitem, inputtext[])
     if (response)
     {
         new str[64];
-        format(str, 64, "ÁÖ§ä´éàÅ×Í¡ '%s'.", inputtext);
+        format(str, 64, "��Ö§ä´éàÅ×��¡ '%s'.", inputtext);
 
         GivePlayerWeapon(playerid, listitem + 22, 500);
         SendClientMessage(playerid, -1, str);
