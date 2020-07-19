@@ -1,7 +1,7 @@
 /*
-	»ÃÑºá»Å§à»ç¹ sampctl by soup
-    - à¾ÔèÁ Easy Dialog
-	- áÅÐ SetSkillPlayer
+	สคริปต์เริ่มต้น sampctl by NayMarch
+    - Easy Dialog
+	- SetSkillPlayer
 
 */
 
@@ -30,7 +30,7 @@ public OnFilterScriptExit()
 main()
 {
 	print("\n----------------------------------");
-	print(" Blank Gamemode by your name here");
+	print(" C r e d i t : N a Y M a r c H");
 	print("----------------------------------\n");
 }
 
